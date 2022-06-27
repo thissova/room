@@ -1,0 +1,149 @@
+<html>
+  <head><link type="text/css" rel="stylesheet" href="style.css"/>
+</head>
+<body onload="setTime()">
+    <div class="title_text" id="chColor">
+        Welcome to <i id = "name" onclick="enterName()"> Enter your name </i>
+         home. Now i Have only one room but i still trying to build my house.
+        <br>
+    </div>
+
+    <div id="left" class="status_text">
+        My ESP32 STATUS:
+        <div id="on">%ON%</div>
+        <div id="off" onclick="noConection()"><blink>%OFF%</blink></div>
+
+        <br><br>
+        
+        <div class="calendar">
+            <div id="month">month</div>
+            <div id="day">day</div>
+            <div id="wday">nameDay</div>
+            <div id="time">time</div>
+            <button onclick="changeColor()"> Change Color</button>
+            <button onclick="getLocation()"> Where I am?</button>
+        </div>
+    </div>
+
+
+    <table align="center">
+        <tr>
+            <td class="left_top_corner"></td>
+            <td class="top_border"></td>
+            <td class="right_top_corner"></td>
+        </tr>
+        <tr>
+            <td class="left_border"></td>
+            <td>
+                <table class="inside_table">
+                    <tr>
+
+                        <td class="inside_segment" onclick="alertTemp(15)">
+                            <img src="https://i.ibb.co/QdjLYHL/temperature.png" alt="temperature" width="25"> 
+                            <br>
+                            22°C
+                        </td>
+
+
+                        <td class="inside_segment" onclick="FlowerControll()" onmouseover = "deleteNotification()">
+                            <img src="https://icons.iconarchive.com/icons/custom-icon-design/lovely-weather-2/512/Humidity-icon.png" alt="" width="60">
+                            <br>
+                            55%
+                        </td>
+
+
+
+                        <td class="inside_segment" onmouseover="Flower(10)">
+                            <img src="https://i.ibb.co/xXf0MH6/floMDqwer.png" alt="flower" width="50">
+                            <progress id="flower" max="100" value="100"></progress>
+                            <!-- <div id="alert"></div> -->
+                        </td>
+                        
+                        
+                    </tr>
+                    <tr>
+                        <td class="inside_segment bed">
+                            <img src="https://i.ibb.co/Y2rXjhz/bed.png" alt="bed-image" width="100">
+                            <br>
+                            My bed is not bad
+                        </td>
+
+
+                        <td class="inside_segment carpet"  onclick="carpetSwitch()">
+                            <img id="curpetImg" src="https://i.ibb.co/K6phLpd/carpet.png" alt="carpet" width="100">
+                            <br>
+                            My pretty carpet
+                        </td>
+
+
+                        <td class="inside_segment">
+                            <div>
+                                <img src="https://img.icons8.com/officel/2x/table.png" alt="table" width="100">
+                            </div>
+                            <div>
+                                <img onclick="sum()" src="https://i.ibb.co/svvy4gq/computer.gif" alt="computer" width="100">
+                                <br>
+                                My calculator for education
+                            </div>
+                        </td>    
+                    </tr>
+                    <tr>
+                        <td class="inside_segment">
+                            <center>
+                                <!-- 7 -->
+                                <div class="dream_ico">
+                                    <center>
+                                        MacBook
+                                    </center>
+                                </div> 
+                            </center>
+                        </td>
+                        <td class="inside_segment">
+                            <center>
+                                <!-- 8 -->
+                                <div class="dream_ico">
+                                    <center>
+                                        <a href="tiles.html">Xbox</a>
+                                    </center>
+                                </div> 
+                            </center>
+                        </td>
+                        <td class="inside_segment">
+                            <center>
+                                <!-- 9 -->
+                                <div class="dream_ico">
+                                    <center>
+                                        IPhone
+                                    </center>
+                                </div> 
+                            </center>
+                        </td>    
+                    </tr>
+                    <tr>
+                        <td colspan="3" class="inside_segment">
+                            <div class="window"><a href="matrix.html">Window</a></div>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+            <td class="right_border"></td>
+        </tr>
+        <tr>
+            <td class="left_down_corner"></td>
+            <td class="bot_border"></td>
+            <td class="right_down_corner"></td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                <div class="room">
+                    MY FIRST ROOM
+                </div>
+            </td>
+        </tr>
+
+    </table>
+    <script src="script.js"></script>
+</body>
+  </html>
+
+
